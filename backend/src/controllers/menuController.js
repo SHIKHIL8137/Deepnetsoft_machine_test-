@@ -25,7 +25,6 @@ export const addMenu = async(req,res)=>{
 export const addItem =async(req,res)=>{
   try {
     const {itemName , description , price ,menuID} = req.body;
-    console.log(req.body)
     if(!itemName || !description || !price || !menuID){
       return res.status(400).json({status :false,message:"Missing requied fields"})
     }

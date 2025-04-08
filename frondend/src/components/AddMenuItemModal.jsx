@@ -7,7 +7,6 @@ import { menuFetch } from '../redux/slice/dataReducer';
 const AddMenuItemModal = ({ isOpen, onClose}) => {
   const dispatch = useDispatch()
   const menus = useSelector((state)=>state.Data.menus);
-  console.log(menus)
     const [isSubmitting, setSubmitting] = useState(false);
    const [formData, setFormData] = useState({
       itemName: '',
@@ -37,7 +36,6 @@ const AddMenuItemModal = ({ isOpen, onClose}) => {
         ...formData,
         [name]: value.trim()
       });
-      console.log(formData)
     };
 
 
