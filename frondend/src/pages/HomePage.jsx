@@ -54,7 +54,7 @@ const HomePage = () => {
     };
     
     fetchMenu();
-  }, []);
+  }, [activeTab]);
 
   useEffect(() => {
     if (activeTab) {

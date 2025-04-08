@@ -20,11 +20,14 @@ const AddMenuModal = ({ isOpen, onClose }) => {
   
     const handleSubmit = async(e) => {
       e.preventDefault();
-      setSubmitting(true);
+      
       if(!formData.menuName || !formData.description ){
         return toast.error('All fields are required');
+      }else if(!(/^[a-zA-Z]*$/.test(formData.menuName))){
+        return toast.error('Item name must be alphabets');
       }
       try {
+        setSubmitting(true);
         const response = await addMenu(formData);
         if(!response.data.status){
           toast.error(response.data.message);
@@ -71,7 +74,6 @@ const AddMenuModal = ({ isOpen, onClose }) => {
               name="menuName"
               value={formData.menuName}
               onChange={handleChange}
-              required
               className="w-full bg-gray-900 border border-gray-700 rounded px-3 py-2 text-white uppercase focus:outline-none focus:ring-2 focus:ring-red-900"
               placeholder="BRUNCH COCKTAILS"
             />
