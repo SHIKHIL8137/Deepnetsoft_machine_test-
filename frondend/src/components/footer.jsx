@@ -11,11 +11,11 @@ const Footer = () => {
         <div className="flex flex-col justify-center text-center border rounded-xl h-full order-2 md:order-1 p-10">
           <h5 className="text-blue-500 mb-4">CONNECT WITH US</h5>
           <div className="flex items-center justify-center mb-2">
-            <Phone size={16} className="mr-2" />
+            <Phone size={16} className="mr-2 text-yellow-300" />
             <span>+91 9567843340</span>
           </div>
           <div className="flex items-center justify-center">
-            <Mail size={16} className="mr-2" />
+            <Mail size={16} className="mr-2 text-yellow-300" />
             <span>info@deepnetsoft.com</span>
           </div>
         </div>
@@ -40,7 +40,7 @@ const Footer = () => {
         <div className="flex flex-col justify-center text-center border rounded-xl h-full order-3 md:order-3 p-10">
           <h5 className="text-blue-500 mb-4">FIND US</h5>
           <div className="flex items-center justify-center">
-            <MapPin size={16} className="mr-2" />
+            <MapPin size={16} className="mr-2 text-yellow-300" />
             <span>First floor, Geo Infopark,<br/> Infopark EXPY, Kakkanad</span>
           </div>
         </div>
